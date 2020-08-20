@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us - Aztech</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/uikit.min.css" />
+  <link rel="stylesheet" href="../css/mystyle.css" />
+  <script src="../js/uikit.min.js"></script>
+  <script src="../js/uikit-icons.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+</head>
+  <body>
+  	<header>
+      <nav class="uk-navbar-container header-nav" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="../index.html">
+            <img class="header-img" src="../img/logowhite.png" alt="Key icon">
+          </a>        
+        </div>
+        <div id="desktopui" class="uk-navbar-right">
+          <div class="uk-navbar-item">
+            <div> <a href="./aboutus.html" class="menuitem">About Us</a></div>
+          </div>
+          <div class="uk-navbar-item">
+            <div> <a href="./expertise.html" class="menuitem">Expertise</a></div>
+          </div>
+          <div class="uk-navbar-item">
+            <div> <a href="./designtobuild.html" class="menuitem">Design-to-build</a></div>
+          </div>
+          <div class="uk-navbar-item">
+            <div> <a href="./resource.html" class="menuitem">Resources</a></div>
+          </div>
+          <div class="uk-navbar-item pad-r-lg">
+            <a href="./contact.html" class="uk-button uk-button-default contactbtn">Contact Us</a>
+          </div>
+        </div>
+        <div id="mobileui" class="uk-navbar-right">
+          <div class="uk-navbar-item">
+            <div class="uk-inline">
+              <button class="uk-button uk-button-default contactbtn" type="button"><a href="" uk-icon="menu"></a></button>
+              <div uk-dropdown="pos: top-right">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li><a href="./aboutus.html" class="menuitem">About Us</a></li>
+                  <li><a href="./expertise.html" class="menuitem">Expertise</a></li>
+                  <li><a href="./designtobuild.html" class="menuitem">Design-to-build</a></li>
+                  <li class="uk-margin-bottom"><a href="./resource.html" class="menuitem">Resources</a></li>
+                  <li><a href="./contact.html" class="uk-button uk-button-default contactbtn">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="uk-container">
+      <div class="uk-child-width-1-1@m uk-margin-large-top uk-margin-large-bottom" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
+        <div class="uk-card uk-card-default uk-card-body">
+          <h1>Expertise</h1>
+        </div>
+      </div>      
+    </section> 	
+  </body>
+</html>
+<script type="text/javascript">
+  function myFunction(x) {
+    var w = window.innerWidth;
+    if(x == undefined) x = {};
+    if(x.matches || w < 970) {
+      $("#mobileui").show();
+      $("#desktopui").hide();
+    } else {
+      $("#mobileui").hide();
+      $("#desktopui").show();
+    }
+  }
+  var x = window.matchMedia("(max-width: 970px)")
+  x.addListener(myFunction) // Attach listener function on state changes
+  myFunction();
+</script>
