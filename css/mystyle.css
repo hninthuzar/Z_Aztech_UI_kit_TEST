@@ -270,3 +270,6 @@ a.footeritem:hover , a.footeritem:focus {
   color: #666;
   box-shadow: 0 5px 12px rgba(0,0,0,.15);
 }
+.signico {
+  color: #1e87f0;
+}
